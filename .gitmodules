@@ -1,0 +1,3 @@
+[submodule "Pneumatic/vendor/spdlog"]
+	path = Pneumatic/vendor/spdlog
+	url = https://github.com/gabime/spdlog
