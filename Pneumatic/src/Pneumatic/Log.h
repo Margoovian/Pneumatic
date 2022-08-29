@@ -1,8 +1,8 @@
 #pragma once
 
 #include "spdlog/spdlog.h"
-#include <memory>
 #include "Core.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Pneumatic {
 	class PNEUMATIC_API Log {

@@ -18,12 +18,16 @@ project "Pneumatic"
     targetdir ("bin/".. outputdir .. "/%{prj.name}")
     objdir ("bin-int/".. outputdir .. "/%{prj.name}")
 
+    pchheader "pneupch.h"
+    pchsource "Pneumatic/src/pneupch.cpp"
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
     }
 
     includedirs {   
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 

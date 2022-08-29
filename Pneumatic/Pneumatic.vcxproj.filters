@@ -4,6 +4,9 @@
     <Filter Include="Pneumatic">
       <UniqueIdentifier>{6B78DA54-D7E2-8ECB-2021-40718CCA6C20}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pneumatic\Events">
+      <UniqueIdentifier>{EF1D5D82-DB16-7CD4-0449-6159F0A05BE0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pneumatic.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Pneumatic\EntryPoint.h">
       <Filter>Pneumatic</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pneumatic\Events\Application.h">
+      <Filter>Pneumatic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\Events\Event.h">
+      <Filter>Pneumatic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\Events\KeyEvent.h">
+      <Filter>Pneumatic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\Events\MouseEvent.h">
+      <Filter>Pneumatic\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pneumatic\Log.h">
       <Filter>Pneumatic</Filter>
     </ClInclude>
+    <ClInclude Include="src\pneupch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pneumatic\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Pneumatic\Log.cpp">
       <Filter>Pneumatic</Filter>
     </ClCompile>
+    <ClCompile Include="src\pneupch.cpp" />
   </ItemGroup>
 </Project>
