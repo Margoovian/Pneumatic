@@ -7,12 +7,6 @@
     <Filter Include="Pneumatic\Events">
       <UniqueIdentifier>{EF1D5D82-DB16-7CD4-0449-6159F0A05BE0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pneumatic\Platforms">
-      <UniqueIdentifier>{720186F1-DE62-63FF-67D0-A9B1D3309ABE}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pneumatic\Platforms\Windows">
-      <UniqueIdentifier>{ACFD6EF9-180B-9DDF-A1F1-98CA0DFE6896}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pneumatic.h" />
@@ -40,12 +34,6 @@
     <ClInclude Include="src\Pneumatic\Log.h">
       <Filter>Pneumatic</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pneumatic\Platforms\Windows\WindowsWindow.h">
-      <Filter>Pneumatic\Platforms\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pneumatic\Window.h">
-      <Filter>Pneumatic</Filter>
-    </ClInclude>
     <ClInclude Include="src\pneupch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +42,6 @@
     </ClCompile>
     <ClCompile Include="src\Pneumatic\Log.cpp">
       <Filter>Pneumatic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pneumatic\Platforms\Windows\WindowsWindow.cpp">
-      <Filter>Pneumatic\Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pneupch.cpp" />
   </ItemGroup>

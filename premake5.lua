@@ -10,11 +10,6 @@ workspace "Pneumatic"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-IncludeDir = {}
-IncludeDir["GLFW"] = "Pneumatic/vendor/GLFW/include"
-
-include "Pneumatic/vendor/GLFW"
-
 project "Pneumatic"
     location "Pneumatic"
     kind "SharedLib"
@@ -33,13 +28,7 @@ project "Pneumatic"
 
     includedirs {   
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
-    }
-
-    links {
-        "GLFW",
-        "opengl32.lib"
+        "%{prj.name}/vendor/spdlog/include"
     }
 
     filter "system:windows"

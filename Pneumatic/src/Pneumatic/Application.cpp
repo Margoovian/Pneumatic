@@ -6,7 +6,7 @@
 
 namespace Pneumatic {
 	Application::Application() {
-		m_Window = std::unique_ptr<Window>(Window::Create());
+
 	}
 
 	Application::~Application() {
@@ -14,8 +14,8 @@ namespace Pneumatic {
 	}
 
 	void Application::Run() {
-		while (m_Running) {
-			m_Window->OnUpdate();
-		}
+		WindowResizeEvent e(1920, 1080);
+		PNEU_WARN(e.ToString());
+		while (true);
 	}
 }
