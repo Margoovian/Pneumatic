@@ -5,6 +5,8 @@
 #include "Pneumatic/Events/MouseEvent.h"
 #include "Pneumatic/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+
 namespace Pneumatic {
 	
 	static bool s_GLFWInitialized = false;
@@ -35,6 +37,10 @@ namespace Pneumatic {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		PNEU_ASSERT(status, "Failed to initialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

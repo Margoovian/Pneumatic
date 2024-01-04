@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pneumatic/vendor/GLFW/include"
+IncludeDir["Glad"] = "Pneumatic/vendor/Glad/include"
 
 include "Pneumatic/vendor/GLFW"
+include "Pneumatic/vendor/Glad"
 
 project "Pneumatic"
     location "Pneumatic"
@@ -34,11 +36,13 @@ project "Pneumatic"
     includedirs {   
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -49,7 +53,8 @@ project "Pneumatic"
 
         defines {
         "PNEU_PLATFORM_WINDOWS",
-        "PNEU_BUILD_DLL"
+        "PNEU_BUILD_DLL",
+        "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands {
