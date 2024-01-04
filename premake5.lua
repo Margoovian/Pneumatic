@@ -58,14 +58,17 @@ project "Pneumatic"
 
     filter "configurations:Debug"
         defines "PNEU_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "PNEU_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PNEU_DIST"
+        buildoptions "/MD"
         optimize "On"
             
 project "Sandbox"
@@ -101,12 +104,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "PNEU_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "PNEU_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PNEU_DIST"
+        buildoptions "/MD"
         optimize "On"

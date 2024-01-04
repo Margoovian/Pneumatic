@@ -1,7 +1,5 @@
 #pragma once
 
-#include "pneupch.h"
-
 #ifdef PNEU_PLATFORM_WINDOWS
 	#ifdef  PNEU_BUILD_DLL
 		#define PNEUMATIC_API __declspec(dllexport)
@@ -20,4 +18,5 @@
 	#define PNEU_ASSERT(x, ...)
 	#define PNEU_CORE_ASSERT(x, ...)
 #endif 
+
 #define BIT(x) (1 << x)

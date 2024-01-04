@@ -6,7 +6,6 @@ extern Pneumatic::Application* Pneumatic::CreateApplication();
 
 int main(int argc, char** argv) {
 	Pneumatic::Log::Init();
-	
 
 	auto app = Pneumatic::CreateApplication();
 	app->Run();

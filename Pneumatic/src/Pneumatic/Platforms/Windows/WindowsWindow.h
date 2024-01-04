@@ -24,6 +24,7 @@ namespace Pneumatic {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+
 		struct WindowData {
 			std::string Title;
 			unsigned int Width, Height;
@@ -31,6 +32,7 @@ namespace Pneumatic {
 
 			EventCallbackFn EventCallback;
 		};
+
 		WindowData m_Data;
 	};
 

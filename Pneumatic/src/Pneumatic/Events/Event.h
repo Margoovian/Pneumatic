@@ -1,8 +1,11 @@
 #pragma once
 
+#include "pneupch.h"
 #include "Pneumatic/Core.h"
 
 namespace Pneumatic {
+
+	// Currently a blocking event system
 
 	enum class EventType {
 		None = 0,
@@ -28,8 +31,9 @@ namespace Pneumatic {
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category;}
 
 	class PNEUMATIC_API Event {
-		friend class EventDispatcher;
 	public:
+		bool Handled = false;
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -39,22 +43,23 @@ namespace Pneumatic {
 			return GetCategoryFlags() & category;
 		}
 	protected:
-		bool m_Handled = false;
+		
 	};
 
 
 	class EventDispatcher {
-		template<typename T>
-		using EventFn = std::function<bool(T&)>;
-	public: EventDispatcher(Event&& event) :
-		m_Event(event) {}
-		  template<typename T>
-		  bool Dispatch(EventFn<T> func) {
+		template<typename T> using EventFn = std::function<bool(T&)>;
+
+	public: EventDispatcher(Event& event) : m_Event(event) {}
+		  
+		  template<typename T> bool Dispatch(EventFn<T> func) {
+
 			  if (m_Event.GetEventType() == T::GetStaticType()) {
-				  m_Event.m_Handled = func(*(T*)&m_Event);
-				  return true
+				  m_Event.Handled = func(*(T*)&m_Event);
+				  return true;
 			  }
-			  return false
+			  return false;
+
 		  }
 	private:
 		Event& m_Event;

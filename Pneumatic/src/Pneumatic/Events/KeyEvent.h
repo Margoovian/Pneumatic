@@ -34,7 +34,7 @@ namespace Pneumatic {
 
 	class PNEUMATIC_API KeyReleasedEvent : public KeyEvent {
 	public:
-		KeyReleasedEvent(int keycode, int repeatCount) :
+		KeyReleasedEvent(int keycode) :
 			KeyEvent(keycode) {}
 
 		std::string ToString() const override {

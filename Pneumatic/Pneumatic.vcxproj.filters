@@ -25,7 +25,7 @@
     <ClInclude Include="src\Pneumatic\EntryPoint.h">
       <Filter>Pneumatic</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pneumatic\Events\Application.h">
+    <ClInclude Include="src\Pneumatic\Events\ApplicationEvents.h">
       <Filter>Pneumatic\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pneumatic\Events\Event.h">
@@ -36,6 +36,12 @@
     </ClInclude>
     <ClInclude Include="src\Pneumatic\Events\MouseEvent.h">
       <Filter>Pneumatic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\Layer.h">
+      <Filter>Pneumatic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\LayerStack.h">
+      <Filter>Pneumatic</Filter>
     </ClInclude>
     <ClInclude Include="src\Pneumatic\Log.h">
       <Filter>Pneumatic</Filter>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pneumatic\Application.cpp">
+      <Filter>Pneumatic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pneumatic\Layer.cpp">
+      <Filter>Pneumatic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pneumatic\LayerStack.cpp">
       <Filter>Pneumatic</Filter>
     </ClCompile>
     <ClCompile Include="src\Pneumatic\Log.cpp">
