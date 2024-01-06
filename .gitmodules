@@ -6,4 +6,4 @@
 	url = https://github.com/ocornut/imgui
 [submodule "Pneumatic/vendor/GLFW"]
 	path = Pneumatic/vendor/GLFW
-	url = https://github.com/glfw/glfw.git
+	url = https://github.com/Margoovian/glfw.git
