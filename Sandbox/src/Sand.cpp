@@ -8,11 +8,11 @@ public:
 	{	}
 
 	void OnUpdate() override {
-		PNEU_INFO("DemoLayer::Update");
+		//PNEU_INFO("DemoLayer::Update");
 	}
 
 	void OnEvent(Pneumatic::Event& event) override {
-		PNEU_TRACE("{0}", event);
+		//PNEU_TRACE("{0}", event);
 	}
 };
 
@@ -20,6 +20,7 @@ class Sandbox : public Pneumatic::Application {
 public:
 	Sandbox() {
 		PushLayer(new DemoLayer());
+		PushOverlay(new Pneumatic::ImGuiLayer());
 	}
 	~Sandbox(){
 

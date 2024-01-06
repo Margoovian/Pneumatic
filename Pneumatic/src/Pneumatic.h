@@ -6,6 +6,8 @@
 #include "Pneumatic/Layer.h"
 #include "Pneumatic/Log.h"
 
+#include "Pneumatic/ImGui/ImGuiLayer.h"
+
 //Entry---------------------------
 
 #include "Pneumatic/EntryPoint.h"

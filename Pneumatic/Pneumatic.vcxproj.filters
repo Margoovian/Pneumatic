@@ -7,8 +7,14 @@
     <Filter Include="Pneumatic\Events">
       <UniqueIdentifier>{EF1D5D82-DB16-7CD4-0449-6159F0A05BE0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pneumatic\ImGui">
+      <UniqueIdentifier>{D55174FC-41DD-E1C0-4AEE-64B5B6F83DC1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Pneumatic\Platforms">
       <UniqueIdentifier>{720186F1-DE62-63FF-67D0-A9B1D3309ABE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pneumatic\Platforms\OpenGL">
+      <UniqueIdentifier>{66564898-5266-F468-BB1F-5987A74EE301}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pneumatic\Platforms\Windows">
       <UniqueIdentifier>{ACFD6EF9-180B-9DDF-A1F1-98CA0DFE6896}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Pneumatic\Events\MouseEvent.h">
       <Filter>Pneumatic\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pneumatic\ImGui\ImGuiLayer.h">
+      <Filter>Pneumatic\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pneumatic\Layer.h">
       <Filter>Pneumatic</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\Pneumatic\Log.h">
       <Filter>Pneumatic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pneumatic\Platforms\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Pneumatic\Platforms\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Pneumatic\Platforms\Windows\WindowsWindow.h">
       <Filter>Pneumatic\Platforms\Windows</Filter>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Pneumatic\Application.cpp">
       <Filter>Pneumatic</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pneumatic\ImGui\ImGuiLayer.cpp">
+      <Filter>Pneumatic\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Pneumatic\Layer.cpp">
       <Filter>Pneumatic</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Pneumatic\Log.cpp">
       <Filter>Pneumatic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pneumatic\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Pneumatic\Platforms\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Pneumatic\Platforms\Windows\WindowsWindow.cpp">
       <Filter>Pneumatic\Platforms\Windows</Filter>
